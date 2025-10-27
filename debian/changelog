@@ -1,5 +1,57 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-mvdan-sh (3.8.0-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream version 3.8.0
+  * Set minimum version required for golang-mvdan-editorconfig
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Nilesh Patra <nilesh@debian.org>  Sun, 18 Feb 2024 20:45:32 +0530
+
+golang-mvdan-sh (3.7.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 3.7.0
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 09 Nov 2023 17:07:00 +0800
+
+golang-mvdan-sh (3.6.0-1) unstable; urgency=medium
+
+  * New upstream version 3.6.0
+    + Update/Re-diff patch
+  * Bump Standards-Version to 4.6.2 (no changes needed)
+
+ -- Nilesh Patra <nilesh@debian.org>  Wed, 15 Feb 2023 00:33:40 +0530
+
+golang-mvdan-sh (3.5.1-1) unstable; urgency=medium
+
+  * New upstream version 3.5.1
+  * Bump Standards-Version to 4.6.1 (no changes needed)
+
+ -- Nilesh Patra <nilesh@debian.org>  Mon, 30 May 2022 19:55:09 +0530
+
+golang-mvdan-sh (3.5.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 3.5.0
+
+ -- Shengjing Zhu <zhsj@debian.org>  Wed, 11 May 2022 23:49:00 +0800
+
+golang-mvdan-sh (3.4.3+ds2-1) unstable; urgency=medium
+
+  * Team upload
+  * Merge shfmt package (Closes: #1008112, #1008186, #1008463)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 29 Apr 2022 23:01:10 +0800
+
+golang-mvdan-sh (3.4.3+ds-1) unstable; urgency=medium
+
+  * Repack to remove unused cmd dir
+  * New upstream version 3.4.3+ds
+  * d/rules: Remove override on dh_auto_install
+  * d/control: Remove Built-Using Field
+
+ -- Nilesh Patra <nilesh@debian.org>  Thu, 17 Mar 2022 00:25:33 +0530
+
+golang-mvdan-sh (3.4.2-1) unstable; urgency=medium
+
+  * Initial release (Closes: #1005742)
+
+ -- Andreas Tille <tille@debian.org>  Wed, 02 Mar 2022 14:16:53 +0530

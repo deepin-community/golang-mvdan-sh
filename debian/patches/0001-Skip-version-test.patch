@@ -1,0 +1,28 @@
+From: Shengjing Zhu <zhsj@debian.org>
+Date: Wed, 11 May 2022 23:51:30 +0800
+Subject: Skip version test
+
+Forwarded: not-needed
+---
+ cmd/shfmt/testdata/script/flags.txtar | 8 --------
+ 1 file changed, 8 deletions(-)
+
+diff --git a/cmd/shfmt/testdata/script/flags.txtar b/cmd/shfmt/testdata/script/flags.txtar
+index 012912c..3ab6a8d 100644
+--- a/cmd/shfmt/testdata/script/flags.txtar
++++ b/cmd/shfmt/testdata/script/flags.txtar
+@@ -8,14 +8,6 @@ stderr 'Utilities' # definitely includes our help text
+ exec shfmt --help
+ stderr 'usage: shfmt'
+ 
+-exec shfmt -version
+-stdout 'devel|v3'
+-! stderr .
+-
+-exec shfmt --version
+-stdout 'devel|v3'
+-! stderr .
+-
+ ! exec shfmt -ln=bash -p
+ stderr 'cannot coexist'
+ 

@@ -1,4 +1,16 @@
 #!/usr/bin/make -f
 
+include /usr/share/dpkg/default.mk
+
+export DH_GOLANG_INSTALL_EXTRA := syntax/canonical.sh
+export DH_GOLANG_EXCLUDES := cmd/gosh _js
+
 %:
-	dh $@
+	dh $@ --builddirectory=_build --buildsystem=golang --with=golang
+
+override_dh_auto_build:
+	dh_auto_build -- -ldflags "-X main.version=$(DEB_VERSION_UPSTREAM)"
+	scdoc < cmd/shfmt/shfmt.1.scd > debian/shfmt.1
+
+execute_after_dh_auto_clean:
+	rm -rf debian/shfmt.1
